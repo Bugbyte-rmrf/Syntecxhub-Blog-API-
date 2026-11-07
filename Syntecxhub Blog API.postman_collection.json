@@ -1,0 +1,1096 @@
+{
+  "info": {
+    "_postman_id": "0dcc7503-91f1-4582-8ed0-3fe61b6f8fe1",
+    "name": "Syntecxhub Blog API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "59250906",
+    "_collection_link": "https://go.postman.co/collection/59250906-0dcc7503-91f1-4582-8ed0-3fe61b6f8fe1?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Create a blog post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Introduction to Backend Development\",\n  \"body\": \"Backend development involves building the server-side logic of applications.\",\n  \"author\": \"John\",\n  \"tags\": [\"Technology\", \"Programming\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Create a blog post",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Introduction to Backend Development\",\n  \"body\": \"Backend development involves building the server-side logic of applications.\",\n  \"author\": \"John\",\n  \"tags\": [\"Technology\", \"Programming\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "356"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"164-BoBs6Yw3ztxwxtAetXot01cOTWI\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 16:56:10 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Blog post created successfully\",\n  \"post\": {\n    \"title\": \"Introduction to Backend Development\",\n    \"body\": \"Backend development involves building the server-side logic of applications.\",\n    \"author\": \"John\",\n    \"tags\": [\n      \"Technology\",\n      \"Programming\"\n    ],\n    \"_id\": \"6aef5829b894f31ee6822b06\",\n    \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n    \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n    \"__v\": 0\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get all blog posts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get all blog posts",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "687"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2af-MZaQv6h18VgLWinXjJ7RKAurSGg\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 16:58:21 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?limit=2&skip=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "2"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Pagination",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?limit=2&skip=0",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "2"
+                },
+                {
+                  "key": "skip",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "686"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2ae-h0PFU4vXcor5nIpfsIa0rjDuL+I\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 16:59:38 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 2,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter by author",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?author=John",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "author",
+              "value": "John"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter by author",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?author=John",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "author",
+                  "value": "John"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "687"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2af-MZaQv6h18VgLWinXjJ7RKAurSGg\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:00:48 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter by Tag",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?tag=Technology",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "tag",
+              "value": "Technology"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter by Tag",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?tag=Technology",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "tag",
+                  "value": "Technology"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "687"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2af-MZaQv6h18VgLWinXjJ7RKAurSGg\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:02:06 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Filter by Date",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?startDate=2026-11-01&endDate=2026-11-06",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "startDate",
+              "value": "2026-11-01"
+            },
+            {
+              "key": "endDate",
+              "value": "2026-11-06"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Filter by Date",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?startDate=2026-11-01&endDate=2026-11-06",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "startDate",
+                  "value": "2026-11-01"
+                },
+                {
+                  "key": "endDate",
+                  "value": "2026-11-06"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "78"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"4e-iA61mxiD4HP02/iTP6B7f7vzplI\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:03:06 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 0,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 0,\n  \"posts\": []\n}"
+        }
+      ]
+    },
+    {
+      "name": "Sort from newest",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?sort=newest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "sort",
+              "value": "newest"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Sort from newest",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?sort=newest",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "newest"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "687"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2af-MZaQv6h18VgLWinXjJ7RKAurSGg\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:04:07 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Sort oldest first",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?sort=oldest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "sort",
+              "value": "oldest"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Sort oldest first",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?sort=oldest",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "sort",
+                  "value": "oldest"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "687"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2af-vkzuPHGomPPs6px6gncQamZQrlI\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:05:02 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 10,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Combine filters, pagination and sorting",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts?author=John&tag=Technology&sort=newest&limit=5&skip=0",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts"
+          ],
+          "query": [
+            {
+              "key": "author",
+              "value": "John"
+            },
+            {
+              "key": "tag",
+              "value": "Technology"
+            },
+            {
+              "key": "sort",
+              "value": "newest"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            },
+            {
+              "key": "skip",
+              "value": "0"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Combine filters, pagination and sorting",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts?author=John&tag=Technology&sort=newest&limit=5&skip=0",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts"
+              ],
+              "query": [
+                {
+                  "key": "author",
+                  "value": "John"
+                },
+                {
+                  "key": "tag",
+                  "value": "Technology"
+                },
+                {
+                  "key": "sort",
+                  "value": "newest"
+                },
+                {
+                  "key": "limit",
+                  "value": "5"
+                },
+                {
+                  "key": "skip",
+                  "value": "0"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "686"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2ae-lq0j5iauog+u834/B1dc5eR+LZQ\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:06:34 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"totalPosts\": 2,\n  \"limit\": 5,\n  \"skip\": 0,\n  \"currentPage\": 1,\n  \"totalPages\": 1,\n  \"posts\": [\n    {\n      \"_id\": \"6aef5867b894f31ee6822b07\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n      \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n      \"__v\": 0\n    },\n    {\n      \"_id\": \"6aef5829b894f31ee6822b06\",\n      \"title\": \"Introduction to Backend Development\",\n      \"body\": \"Backend development involves building the server-side logic of applications.\",\n      \"author\": \"John\",\n      \"tags\": [\n        \"Technology\",\n        \"Programming\"\n      ],\n      \"createdAt\": \"2026-11-07T16:56:09.539Z\",\n      \"updatedAt\": \"2026-11-07T16:56:09.539Z\",\n      \"__v\": 0\n    }\n  ]\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get a single post by ID",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts",
+            "6aef5867b894f31ee6822b07"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get a single post by ID",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts",
+                "6aef5867b894f31ee6822b07"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "304"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"130-4WWXqwKDIHKk4NaD+yyxTM7j1Zc\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:09:50 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"_id\": \"6aef5867b894f31ee6822b07\",\n  \"title\": \"Introduction to Backend Development\",\n  \"body\": \"Backend development involves building the server-side logic of applications.\",\n  \"author\": \"John\",\n  \"tags\": [\n    \"Technology\",\n    \"Programming\"\n  ],\n  \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n  \"updatedAt\": \"2026-11-07T16:57:11.721Z\",\n  \"__v\": 0\n}"
+        }
+      ]
+    },
+    {
+      "name": "Update a post",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Backend Development Guide\",\n  \"body\": \"This article now contains updated information.\",\n  \"author\": \"John\",\n  \"tags\": [\"Technology\", \"Backend\"]\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts",
+            "6aef5867b894f31ee6822b07"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "New Request",
+          "originalRequest": {
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"title\": \"Updated Backend Development Guide\",\n  \"body\": \"This article now contains updated information.\",\n  \"author\": \"John\",\n  \"tags\": [\"Technology\", \"Backend\"]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts",
+                "6aef5867b894f31ee6822b07"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "320"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"140-Q7ZzSz1Sb5/vrkFGhuPlpaGn4Y8\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:19:39 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Blog post updated successfully\",\n  \"post\": {\n    \"_id\": \"6aef5867b894f31ee6822b07\",\n    \"title\": \"Updated Backend Development Guide\",\n    \"body\": \"This article now contains updated information.\",\n    \"author\": \"John\",\n    \"tags\": [\n      \"Technology\",\n      \"Backend\"\n    ],\n    \"createdAt\": \"2026-11-07T16:57:11.721Z\",\n    \"updatedAt\": \"2026-11-07T17:19:39.518Z\",\n    \"__v\": 0\n  }\n}"
+        }
+      ]
+    },
+    {
+      "name": "Delete a post",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "posts",
+            "6aef5867b894f31ee6822b07"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Delete a post",
+          "originalRequest": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/posts/6aef5867b894f31ee6822b07",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "posts",
+                "6aef5867b894f31ee6822b07"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "x-powered-by",
+              "value": "Express"
+            },
+            {
+              "key": "content-type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "content-length",
+              "value": "44"
+            },
+            {
+              "key": "etag",
+              "value": "W/\"2c-R89+SOZsezq4BTyEThuAtXot5xI\""
+            },
+            {
+              "key": "date",
+              "value": "Sat, 07 Nov 2026 17:25:02 GMT"
+            },
+            {
+              "key": "connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "keep-alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n  \"message\": \"Blog post deleted successfully\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "New Request",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": ""
+        }
+      },
+      "response": []
+    }
+  ]
+}
